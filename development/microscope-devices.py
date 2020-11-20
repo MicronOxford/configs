@@ -2,7 +2,7 @@
 
 import microscope
 import microscope.testsuite.devices as testdevices
-from microscope.devices import device
+from microscope.device_server import device
 
 
 def make_xy_stage(**kwargs):
