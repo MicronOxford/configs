@@ -6,8 +6,8 @@ import microscope.testsuite.devices as testdevices
 DEVICES = [
     device(testdevices.TestCamera, '127.0.0.1', 8000,),
     device(testdevices.TestCamera, '127.0.0.1', 8001),
-    device(testdevices.TestLaser, '127.0.0.1', 8002),
-    device(testdevices.TestLaser, '127.0.0.1', 8003),
+    device(testdevices.TestLightSource, '127.0.0.1', 8002),
+    device(testdevices.TestLightSource, '127.0.0.1', 8003),
     device(testdevices.TestFilterWheel, '127.0.0.1', 8004,
            {'positions': 6}),
     device(testdevices.TestFilterWheel, '127.0.0.1', 8005,
