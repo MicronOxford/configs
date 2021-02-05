@@ -1,0 +1,89 @@
+[server]
+ipAddress: 127.0.0.1
+port: 7700
+
+[dsp]
+type: cockpit.devices.executorDevices.ExecutorDevice
+#uri:  PYRO:redPitaya@192.168.1.226:8005
+uri: PYRO:DummyDSP@127.0.0.1:8006
+dlines: 16
+alines: 2
+
+[40x]
+type: cockpit.devices.objective.ObjectiveDevice
+pixel_size: 1
+
+[cameraR]
+type: cockpit.devices.microscopeCamera.MicroscopeCamera
+uri: PYRO:cameraR@localhost:8000
+#triggerSource: dsp
+#triggerLine: 2
+
+[cameraG]
+type: cockpit.devices.microscopeCamera.MicroscopeCamera
+uri: PYRO:cameraG@localhost:8000
+#triggerSource: dsp
+#triggerLine: 2
+
+[cameraB]
+type: cockpit.devices.microscopeCamera.MicroscopeCamera
+uri: PYRO:cameraB@localhost:8000
+#triggerSource: dsp
+#triggerLine: 2
+
+[filterwheelR]
+type: cockpit.devices.microscopeDevice.MicroscopeFilter
+uri: PYRO:filterwheelR@localhost:8000
+cameras: cameraR
+filters:
+  0, Blue, 460
+  1, Green, 510
+  2, Red, 620
+
+[filterwheelG]
+type: cockpit.devices.microscopeDevice.MicroscopeFilter
+uri: PYRO:filterwheelG@localhost:8000
+cameras: cameraG
+filters:
+  0, Blue, 460
+  1, Green, 510
+  2, Red, 620
+
+[filterwheelB]
+type: cockpit.devices.microscopeDevice.MicroscopeFilter
+uri: PYRO:filterwheelB@localhost:8000
+cameras: cameraB
+filters:
+  0, Blue, 460
+  1, Green, 510
+  2, Red, 620
+
+[stage]
+type: cockpit.devices.microscopeDevice.MicroscopeStage
+uri: PYRO:stage@localhost:8000
+x-axis-name: x
+y-axis-name: y
+z-axis-name: z
+x-units-per-micron: 1
+y-units-per-micron: 1
+z-units-per-micron: 1
+movement_time: 0.03 0.03
+
+
+[Testlaser]
+type: cockpit.devices.microscopeDevice.MicroscopeLaser
+uri: PYRO:TestLaser@localhost:8003
+wavelength: 488
+triggerSource: dsp
+triggerLine: 1
+
+
+
+[zPiezo]
+type: cockpit.devices.stage.SimplePiezo
+analogSource: dsp
+analogLine: 0
+offset: 0
+gain: 37.2318
+min: 0
+range: 220
