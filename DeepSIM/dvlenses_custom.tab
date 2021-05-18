@@ -1,0 +1,15 @@
+id=10118
+name=Olympus 10X/0.25, LMPlanFL N, UIS2
+magn=10.0
+na=0.25
+wd=21.0
+type=air
+pn=N2183200
+
+id=10618
+name=Olympus 60X/1.10, LUMFL, UIS2
+magn=60.0
+na=1.10
+wd=1.5
+type=water
+pn=N2667900

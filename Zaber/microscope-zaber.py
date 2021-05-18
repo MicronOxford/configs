@@ -5,18 +5,22 @@ import microscope.cameras.ximea as ximea
 import microscope.controllers.zaber as zaber
 import microscope.controllers.coolled as coolled
 
-import microscope.testsuite.devices as testdevices
+from microscope.simulators import (
+    SimulatedCamera,
+    SimulatedFilterWheel,
+    SimulatedLightSource,
+)
+from microscope.testsuite.devices import DummyDSP
 from microscope.devices import AxisLimits
-#import microscope.controllers.stageAwareCamera as mosaicCam
 
 
 DEVICES = [
     device(ximea.XimeaCamera, '127.0.0.1', 8000),
-    device(testdevices.DummyDSP, '127.0.0.1', 8006),
-    device(testdevices.TestCamera, '127.0.0.1', 8001),
-    device(testdevices.TestFilterWheel, '127.0.0.1', 8004,
+    device(DummyDSP, '127.0.0.1', 8006),
+    device(SimulatedCamera, '127.0.0.1', 8001),
+    device(SimulatedFilterWheel, '127.0.0.1', 8004,
           conf={'positions': 5}),
-    device(testdevices.TestLaser, '127.0.0.1',8003),
+    device(SimulatedLightSource, '127.0.0.1',8003),
     device(zaber.ZaberDaisyChain, '127.0.0.1',8010,
            conf={'port':'/dev/tty.usbserial-AK06IX8F',
                  'address2type': {
