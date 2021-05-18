@@ -1,0 +1,9 @@
+[Unit]
+Description=Red Pitaya DSP service for cockpit
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /root/RedPitaya-DSP/start-DSP.sh
+
+[Install]
+WantedBy=multi-user.target
