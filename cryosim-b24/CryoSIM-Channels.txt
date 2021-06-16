@@ -1,0 +1,118 @@
+{
+  "GFP-525": {
+    "transmitted": false,
+    "reflected": true,
+    "Ambient": {
+      "isEnabled": false,
+      "exposureTime": 100.0
+    },
+    "405nm power": 0.0,
+    "405nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "488nm power": 0.4,
+    "488nm": {
+      "isEnabled": true,
+      "exposureTime": 100
+    },
+    "561nm power": 0.0,
+    "561nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "647nm power": 0.0,
+    "647nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "reflected filter": 4
+  },
+  "RFP-600": {
+    "transmitted": true,
+    "reflected": false,
+    "Ambient": {
+      "isEnabled": false,
+      "exposureTime": 100.0
+    },
+    "405nm power": 0.0,
+    "405nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "488nm power": 0.4,
+    "488nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "561nm power": 0.4,
+    "561nm": {
+      "isEnabled": true,
+      "exposureTime": 100
+    },
+    "647nm power": 0.0,
+    "647nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "transmitted filter": 1
+  },
+  "DAPI": {
+    "transmitted": false,
+    "reflected": true,
+    "Ambient": {
+      "isEnabled": false,
+      "exposureTime": 100.0
+    },
+    "405nm power": 0.1,
+    "405nm": {
+      "isEnabled": true,
+      "exposureTime": 100
+    },
+    "488nm power": 0.01,
+    "488nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "561nm power": 0.01,
+    "561nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "647nm power": 0.01,
+    "647nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "reflected filter": 0
+  },
+  "FarRed": {
+    "transmitted": true,
+    "reflected": false,
+    "Ambient": {
+      "isEnabled": false,
+      "exposureTime": 100.0
+    },
+    "405nm power": 0.1,
+    "405nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "488nm power": 0.01,
+    "488nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "561nm power": 0.01,
+    "561nm": {
+      "isEnabled": false,
+      "exposureTime": 100
+    },
+    "647nm power": 0.1,
+    "647nm": {
+      "isEnabled": true,
+      "exposureTime": 100
+    },
+	"transmitted filter": 3
+  }
+}
