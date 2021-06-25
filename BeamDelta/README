@@ -1,0 +1,14 @@
+Configs for the Micron Beamdelta hardware with 2 Ximea cameras attached.
+Will only work with these cameras as requires serial numbers. 
+
+First ensiure you have BeramDelata and microscope installed
+
+python -m pip install BeamDelta
+
+Start the camera server with
+
+deviceserver ximea-camera.py
+
+Then, in the new window start BeamDelta with
+
+BeamDelta PYRO4:XimeaCamera@127.0.0.1:8000 PYRO4:XimeaCamera@127.0.0.1:8001
